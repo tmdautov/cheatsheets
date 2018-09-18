@@ -1,0 +1,38 @@
+/* *******************************************************************************************
+ * CLASS FIELD DECORATORS FOR DIRECTIVES AND COMPONENTS
+ * ******************************************************************************************* */
+
+
+import { Input, ... } from '@angular/core';
+
+// Declares an input property that you can update via property binding 
+// (example: <my-cmp [myProperty]="someExpression">).
+@Input() myProperty;  
+
+// Declares an output property that fires events that you can subscribe to with an event binding 
+// (example: <my-cmp (myEvent)="doSomething()">).
+@Output() myEvent = new EventEmitter(); 
+
+// Binds a host element property (here, the CSS class valid) to a directive/component property 
+// (isValid).
+@HostBinding('class.valid') isValid;  
+
+// Subscribes to a host element event (click) with a directive/component method (onClick), 
+// optionally passing an argument ($event).
+@HostListener('click', ['$event']) onClick(e) {...} 
+
+// Binds the first result of the component content query (myPredicate) to a property 
+// (myChildComponent) of the class.
+@ContentChild(myPredicate) myChildComponent;  
+
+// Binds the results of the component content query (myPredicate) to a property 
+// (myChildComponents) of the class.
+@ContentChildren(myPredicate) myChildComponents;  
+
+// Binds the first result of the component view query (myPredicate) to a property 
+// (myChildComponent) of the class. Not available for directives.
+@ViewChild(myPredicate) myChildComponent; 
+
+// Binds the results of the component view query (myPredicate) to a property (myChildComponents)
+// of the class. Not available for directives.
+@ViewChildren(myPredicate) myChildComponents; 
