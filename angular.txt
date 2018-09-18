@@ -2,8 +2,21 @@
  * CLASS FIELD DECORATORS FOR DIRECTIVES AND COMPONENTS
  * ******************************************************************************************* */
 
+@Input() myProperty;  
+@Output() myEvent = new EventEmitter(); 
 
-import { Input, ... } from '@angular/core';
+@HostBinding('class.valid') isValid;  
+@HostListener('click', ['$event']) onClick(e) {...} 
+
+@ContentChild(myPredicate) myChildComponent;  
+@ContentChildren(myPredicate) myChildComponents;  
+
+@ViewChild(myPredicate) myChildComponent; 
+@ViewChildren(myPredicate) myChildComponents; 
+
+
+
+
 
 // Declares an input property that you can update via property binding 
 // (example: <my-cmp [myProperty]="someExpression">).
