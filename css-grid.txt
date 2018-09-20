@@ -1,0 +1,25 @@
+grid-template-columns: 40px 50px auto 50px 40px
+grid-template-rows: 25% 100px auto
+grid-template-areas: "a b c" | none
+grid-template: "a a a" 20% "b b b" auto | 100px 1fr / 50px 1fr
+
+grid-column-gap: 10px
+grid-row-gap: 10px
+
+justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly
+justify-items: start | end | center | stretch
+justify-self: start | end | center | stretch
+align-content: flex-start | flex-end | center | space-between | space-around | stretch
+align-items: start | end | center | stretch
+align-self: start | end | center | stretch
+
+grid-auto-columns: 100px | max-content | min-content
+grid-auto-rows: 100px | max-content | min-content
+grid-auto-flow: row | column | row dense | column dense
+
+grid-column-start: 2 | areaname | span 2 | span areaname | auto
+grid-column-end: 2 | areaname | span 2 | span areaname | auto
+grid-row-start: 2 | areaname | span 2 | span areaname | auto
+grid-row-end: 2 | areaname | span 2 | span areaname | auto
+grid-column: 3 / span 2
+grid-row: 3 / span 2
