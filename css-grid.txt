@@ -1,11 +1,14 @@
+// rules to place columns/rows
 grid-template-columns: 40px 50px auto 50px 40px
 grid-template-rows: 25% 100px auto
 grid-template-areas: "a b c" | none
 grid-template: "a a a" 20% "b b b" auto | 100px 1fr / 50px 1fr
 
+// distance between rows and columns
 grid-column-gap: 10px
 grid-row-gap: 10px
 
+// по какому правилу расположить содержимое контейнера: прижать справа, слева или по центру
 justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly
 justify-items: start | end | center | stretch
 justify-self: start | end | center | stretch
