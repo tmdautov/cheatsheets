@@ -1,0 +1,1 @@
+ng g c --module=module_name
