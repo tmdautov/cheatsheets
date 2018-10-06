@@ -1,9 +1,3 @@
-/* *******************************************************************************************
- * ROUTING AND NAVIGATION
- * https://angular.io/guide/router
- * ******************************************************************************************* */
-
-
 import { Routes, RouterModule, ... } from '@angular/router';
 
 const routes: Routes = [
@@ -15,23 +9,17 @@ const routes: Routes = [
   { path: ..., component: ..., data: { message: 'Custom' } }
 ]);
 
-// Configures routes for the application. Supports static, parameterized, redirect, and wildcard 
-// routes. Also supports custom route data and resolve.
 const routing = RouterModule.forRoot(routes); 
 
 // Marks the location to load the component of the active route.
-// <router-outlet></router-outlet>
-// <router-outlet name="aux"></router-outlet>
+<router-outlet></router-outlet>
+<router-outlet name="aux"></router-outlet>
 
-// Creates a link to a different view based on a route instruction consisting of a route path, 
-// required and optional parameters, query parameters, and a fragment. To navigate to a root 
-// route, use the / prefix; for a child route, use the ./prefix; for a sibling or parent, use the 
-// ../ prefix.
-// <a routerLink="/path">
-// <a [routerLink]="[ '/path', routeParam ]">
-// <a [routerLink]="[ '/path', { matrixParam: 'value' } ]">
-// <a [routerLink]="[ '/path' ]" [queryParams]="{ page: 1 }">
-// <a [routerLink]="[ '/path' ]" fragment="anchor">
+<a routerLink="/path">
+<a [routerLink]="[ '/path', routeParam ]">
+<a [routerLink]="[ '/path', { matrixParam: 'value' } ]">
+<a [routerLink]="[ '/path' ]" [queryParams]="{ page: 1 }">
+<a [routerLink]="[ '/path' ]" fragment="anchor">
 
 // The provided classes are added to the element when the routerLink becomes the current active
 // route.
